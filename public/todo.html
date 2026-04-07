@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="todo-page">
+  <main class="todo-shell">
+    <header class="todo-banner">
+      <div>
+        <h1>Collaborative Task Manager</h1>
+        <p>Realtime updates with Firebase Realtime Database</p>
+      </div>
+      <button id="btn-signout" class="secondary-button">Sign Out</button>
+    </header>
+
+    <section class="card section-card controls-card">
+      <div class="section-title">controls</div>
+      <div class="control-row">
+        <input id="task-title" placeholder="Task title" />
+        <input id="task-assignee" placeholder="Assignee (name or email)" />
+        <select id="task-priority">
+          <option value="High">High priority</option>
+          <option value="Medium" selected>Medium priority</option>
+          <option value="Low">Low priority</option>
+        </select>
+        <button id="btn-add" class="primary-button">Add Task</button>
+      </div>
+    </section>
+
+    <section class="card section-card filters-card">
+      <div class="section-title">filters</div>
+      <div class="filter-row">
+        <label>
+          Filter:
+          <select id="status-filter">
+            <option value="All">All</option>
+            <option value="todo">Todo</option>
+            <option value="inprogress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+        </label>
+        <label>
+          Search:
+          <input id="search-input" placeholder="Search" />
+        </label>
+      </div>
+    </section>
+
+    <section class="card section-card tasks-card">
+      <div class="section-title">tasksList</div>
+      <div id="task-list" class="task-list"></div>
+    </section>
+  </main>
+
+  <script type="module" src="todo.js"></script>
+</body>
+</html>
