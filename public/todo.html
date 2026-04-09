@@ -11,7 +11,7 @@
     <header class="todo-banner">
       <div>
         <h1>Collaborative Task Manager</h1>
-        <p>Realtime updates with Firebase Realtime Database</p>
+        <p>Realtime updates with Spring Boot WebSocket</p>
       </div>
       <button id="btn-signout" class="secondary-button">Sign Out</button>
     </header>
@@ -55,6 +55,8 @@
     </section>
   </main>
 
-  <script type="module" src="todo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+  <script src="todo.js"></script>
 </body>
 </html>
