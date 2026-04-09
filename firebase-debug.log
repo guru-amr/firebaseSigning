@@ -1,0 +1,59 @@
+[debug] [2026-04-09T13:54:10.463Z] ----------------------------------------------------------------------
+[debug] [2026-04-09T13:54:10.468Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AMR\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-04-09T13:54:10.469Z] CLI Version:   15.13.0
+[debug] [2026-04-09T13:54:10.469Z] Platform:      win32
+[debug] [2026-04-09T13:54:10.469Z] Node Version:  v22.21.0
+[debug] [2026-04-09T13:54:10.470Z] Time:          Thu Apr 09 2026 19:24:10 GMT+0530 (India Standard Time)
+[debug] [2026-04-09T13:54:10.470Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-09T13:54:13.264Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-09T13:54:13.265Z] > authorizing via signed-in user (gururajasekar25@gmail.com)
+[debug] [2026-04-09T13:54:13.265Z] [iam] checking project fir-sign-5cfec for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-04-09T13:54:13.268Z] Checked if tokens are valid: false, expires at: 1775742714865
+[debug] [2026-04-09T13:54:13.268Z] Checked if tokens are valid: false, expires at: 1775742714865
+[debug] [2026-04-09T13:54:13.268Z] > refreshing access token with scopes: []
+[debug] [2026-04-09T13:54:13.271Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-09T13:54:13.271Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-09T13:54:13.596Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-04-09T13:54:13.596Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-09T13:54:13.612Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sign-5cfec:testIamPermissions [none]
+[debug] [2026-04-09T13:54:13.613Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sign-5cfec:testIamPermissions  x-goog-user-project=fir-sign-5cfec
+[debug] [2026-04-09T13:54:13.613Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sign-5cfec:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-09T13:54:15.252Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sign-5cfec:testIamPermissions 200
+[debug] [2026-04-09T13:54:15.253Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sign-5cfec:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-09T13:54:15.254Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:15.254Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:15.254Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-sign-5cfec [none]
+[debug] [2026-04-09T13:54:15.946Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-sign-5cfec 200
+[debug] [2026-04-09T13:54:15.946Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-sign-5cfec {"projectId":"fir-sign-5cfec","projectNumber":"724928683935","displayName":"firebase sign","name":"projects/fir-sign-5cfec","resources":{"hostingSite":"fir-sign-5cfec","realtimeDatabaseInstance":"fir-sign-5cfec-default-rtdb"},"state":"ACTIVE","etag":"1_2b77b3b0-25dc-42f5-aa55-b117063d8c44"}
+[info] 
+[info] === Deploying to 'fir-sign-5cfec'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-04-09T13:54:15.959Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:15.960Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:15.960Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/fir-sign-5cfec/versions [none]
+[debug] [2026-04-09T13:54:15.960Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/fir-sign-5cfec/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-04-09T13:54:17.378Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/fir-sign-5cfec/versions 200
+[debug] [2026-04-09T13:54:17.379Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/fir-sign-5cfec/versions {"name":"projects/724928683935/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[fir-sign-5cfec]: beginning deploy... 
+[info] i  hosting[fir-sign-5cfec]: found 6 files in public 
+[debug] [2026-04-09T13:54:17.404Z] [hosting] uploading with 200 concurrency
+[debug] [2026-04-09T13:54:17.419Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:17.419Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:17.423Z] [hosting] hash cache [cHVibGlj] stored for 6 files
+[debug] [2026-04-09T13:54:17.423Z] [hosting][hash queue][FINAL] {"max":8,"min":1,"avg":3.1666666666666665,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":14}
+[debug] [2026-04-09T13:54:17.424Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/724928683935/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6:populateFiles [none]
+[debug] [2026-04-09T13:54:17.424Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/724928683935/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6:populateFiles {"files":{"/todo.html":"e0249070a28fc997f699732654793fbd7c64f46acc66b0ac513c28c3950384fb","/style.css":"3886cb47db6199494d9b7ed4a16654ba270adaa05fe4af9bd2f4640eacaa6de2","/index.html":"6ed7743595dd92de28c696ab597cdb00799215f4d36e2bdd4a680d3f56417244","/404.html":"762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890","/todo.js":"8a8c0cdcb3d1fa9fe19069fce0fcf99a8ef32c9d3012f609de50252a5178c31d","/app.js":"3a4fdc08323f3ea2374885be50da77fef33c3284f6b0c037be8356dc28045539"}}
+[debug] [2026-04-09T13:54:18.241Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/724928683935/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6:populateFiles 200
+[debug] [2026-04-09T13:54:18.242Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/724928683935/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6:populateFiles {"uploadRequiredHashes":["8a8c0cdcb3d1fa9fe19069fce0fcf99a8ef32c9d3012f609de50252a5178c31d","3a4fdc08323f3ea2374885be50da77fef33c3284f6b0c037be8356dc28045539"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6/files"}
+[debug] [2026-04-09T13:54:18.251Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:18.252Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:18.254Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:18.256Z] Checked if tokens are valid: true, expires at: 1775746452597
+[debug] [2026-04-09T13:54:18.264Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6/files/8a8c0cdcb3d1fa9fe19069fce0fcf99a8ef32c9d3012f609de50252a5178c31d [none]
+[debug] [2026-04-09T13:54:18.266Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6/files/8a8c0cdcb3d1fa9fe19069fce0fcf99a8ef32c9d3012f609de50252a5178c31d [stream]
+[debug] [2026-04-09T13:54:18.283Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6/files/3a4fdc08323f3ea2374885be50da77fef33c3284f6b0c037be8356dc28045539 [none]
+[debug] [2026-04-09T13:54:18.283Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/fir-sign-5cfec/versions/2db5db9385c7b1e6/files/3a4fdc08323f3ea2374885be50da77fef33c3284f6b0c037be8356dc28045539 [stream]
+[debug] [2026-04-09T13:54:18.294Z] [hosting][populate queue][FINAL] {"max":840,"min":840,"avg":840,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":876}
+[debug] [2026-04-09T13:54:18.298Z] [hosting] uploads queued: 2
