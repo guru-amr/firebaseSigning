@@ -1,0 +1,9 @@
+[build]
+builder = "NIXPACKS"
+
+[build.buildCommand]
+cmd = "mvn clean package -DskipTests"
+
+[deploy]
+startCommand = "java -jar target/tasks-backend-0.0.1-SNAPSHOT.jar"
+healthcheckPath = "/api/tasks"
