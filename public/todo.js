@@ -1,4 +1,4 @@
-const API = 'http://localhost:8080/api';
+const API = 'https://firebasesigning-production.up.railway.app/api';
 const token = localStorage.getItem('token');
 if (!token) location.href = 'index.html';
 
@@ -87,7 +87,7 @@ const renderTaskCard = (task) => {
 };
 
 // WebSocket for real-time updates
-const socket = new SockJS('http://localhost:8080/ws');
+const socket = new SockJS('https://firebasesigning-production.up.railway.app/ws');
 const stompClient = Stomp.client(socket);
 stompClient.connect({}, () => {
   stompClient.subscribe('/topic/tasks', (msg) => {

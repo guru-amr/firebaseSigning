@@ -1,15 +1,22 @@
 package com.tasks.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.cors.*;
+import org.springframework.web.filter.CorsFilter;
 
 @Configuration
-public class CorsConfig implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**")
-                .allowedOriginPatterns("*")
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
-                .allowedHeaders("*");
+public class CorsConfig {
+    @Bean
+    public CorsFilter corsFilter() {
+        CorsConfiguration config = new CorsConfiguration();
+        config.addAllowedOrigin("https://fir-sign-5cfec.web.app");
+        config.addAllowedOrigin("https://fir-sign-5cfec.firebaseapp.com");
+        config.addAllowedOrigin("http://localhost:5000");
+        config.addAllowedMethod("*");
+        config.addAllowedHeader("*");
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
     }
 }

@@ -1,4 +1,4 @@
-const API = 'http://localhost:8080/api';
+const API = 'https://firebasesigning-production.up.railway.app/api';
 
 const msg = (text) => document.getElementById('message').textContent = text;
 
