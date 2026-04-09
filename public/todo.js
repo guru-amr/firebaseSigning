@@ -1,4 +1,4 @@
-const API = 'https://firebasesigning-production-8202.up.railway.app/api';
+const API = 'https://firebasesigning-production-4d96.up.railway.app/api';
 const token = localStorage.getItem('token');
 if (!token) location.href = 'index.html';
 
@@ -87,7 +87,7 @@ const renderTaskCard = (task) => {
 };
 
 // WebSocket for real-time updates
-const socket = new SockJS('https://firebasesigning-production-8202.up.railway.app/ws');
+const socket = new SockJS('https://firebasesigning-production-4d96.up.railway.app/ws');
 const stompClient = Stomp.client(socket);
 stompClient.connect({}, () => {
   stompClient.subscribe('/topic/tasks', (msg) => {

@@ -12,8 +12,8 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("https://fir-sign-5cfec.web.app");
         config.addAllowedOrigin("https://fir-sign-5cfec.firebaseapp.com");
+        config.addAllowedOrigin("https://firebasesigning-production-4d96.up.railway.app");
         config.addAllowedOrigin("http://localhost:5000");
-        config.addAllowedOrigin("https://firebasesigning-production-8202.up.railway.app");
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

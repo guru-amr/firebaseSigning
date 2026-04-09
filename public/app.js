@@ -1,4 +1,4 @@
-const API = 'https://firebasesigning-production-8202.up.railway.app/api';
+const API = 'https://firebasesigning-production-4d96.up.railway.app/api';
 
 const msg = (text) => document.getElementById('message').textContent = text;
 
