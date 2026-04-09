@@ -13,6 +13,7 @@ public class CorsConfig {
         config.addAllowedOrigin("https://fir-sign-5cfec.web.app");
         config.addAllowedOrigin("https://fir-sign-5cfec.firebaseapp.com");
         config.addAllowedOrigin("http://localhost:5000");
+        config.addAllowedOrigin("https://firebasesigning-production-8202.up.railway.app");
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
